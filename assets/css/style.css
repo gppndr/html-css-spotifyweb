@@ -1,0 +1,117 @@
+/* color palette */
+:root {
+  --sidebar: #000000;
+  --upgrade-bar: #080b12;
+  --music: #141922;
+  --player: #282828;
+  --upgrade-button: #64666b;
+  --lightgreen: #87c52c;
+  --playlist: #a3a3a3;
+}
+
+/* #region common rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* #endregion */
+
+/* #region measurements */
+:root {
+  --sidebar-mobile: 50px;
+  --sidebar-wide: 232px;
+}
+.wrapper {
+  height: 100vh;
+}
+.top {
+  height: calc(100vh - 90px);
+}
+.player {
+  height: 90px;
+  background-color: var(--player);
+}
+.sidebar {
+  width: var(--sidebar-mobile);
+  background-color: var(--sidebar);
+  height: 100%;
+}
+.content {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  max-width: 1440px;
+}
+.upgrade {
+  height: 90px;
+  background-color: var(--upgrade-bar);
+}
+.music {
+  height: calc(100% - 90px);
+  overflow-y: auto;
+  background-color: var(--music);
+}
+.album {
+  width: calc((100% / 2) - 1rem);
+  aspect-ratio: 1/1;
+}
+/* #endregion */
+
+/* #region utility */
+
+/* #region flex */
+.d_flex {
+  display: flex;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.flex-start{
+    justify-content: flex-start;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+/* #endregion flex */
+/* #endregion utility */
+
+/* #region debug */
+.debug .album {
+  background-color: lightblue;
+}
+.debug .player .left, .debug .player .right{
+    background-color: lightpink;
+}
+
+/* #region content */
+
+/* #region player */
+.player .left, .player .right{
+    flex-grow: 1;
+}
+.player .center{
+    flex-grow: 4;
+} 
+/* #region responsive */
+@media screen and (min-width: 639px) {
+  .sidebar {
+    width: var(--sidebar-wide);
+  }
+}
+
+@media screen and (min-width: 878px) {
+  .album {
+    width: calc((100% / 4) - 1rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .album {
+    width: calc((100% / 6) - 1rem);
+  }
+}
