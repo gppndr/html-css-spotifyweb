@@ -114,10 +114,10 @@ img {
 .debug .album {
   background-color: lightblue;
 }
-.debug .player .left,
+/* .debug .player .left,
 .debug .player .right {
   background-color: lightpink;
-}
+} */
 /* #endregion debug */
 
 /* #region top */
@@ -200,13 +200,6 @@ img {
 .player .right{
   padding-right: 0.563rem;
 }
-.player .left,
-.player .right {
-  flex-grow: 1;
-}
-.player .center {
-  flex-grow: 4;
-}
 .player .left img{
   object-fit: fit;
  width: 1.813rem;
@@ -214,6 +207,12 @@ img {
 }
 .player .song_info{
   padding-left: 1rem;
+}
+.streaming_control>*, .volume>*{
+  padding: 0 0.5rem;
+}
+.streaming_control i, .volume i{
+  font-size: 1.2rem;
 }
 
 /* #region hover */

@@ -17,7 +17,7 @@
     <title>Spotify</title>
 </head>
 
-<body>
+<body class="debug">
     <div class="wrapper">
         <div class="top d-flex">
             <div class="sidebar d-flex column align-center space-between">
@@ -108,8 +108,8 @@
             <!-- /.content -->
         </div>
         <!-- /.top -->
-        <div class="player d_flex">
-            <div class="left flex-start">
+        <div class="player d-flex space-between">
+            <div class="left">
                 <div class="song d-flex align-center">
                     <img src="./assets/img/sinister.jpeg" alt="sinister cover album">
                     <div class="song_info">
@@ -120,13 +120,25 @@
                 <!-- /.song -->
             </div>
             <!-- /.left -->
-            <div class="center">
-                <div class="streaming"></div>
+            <div class="center d-flex align-center flex-center">
+                <div class="streaming">
+                    <div class="streaming_control d-flex align-center">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                    <!-- /.streaming_control -->
+                </div>
                 <!-- /.streaming -->
             </div>
             <!-- /.center -->
-            <div class="right flex-end">
-                <div class="volume"></div>
+            <div class="right d-flex align-center">
+                <div class="volume d-flex align-center">
+                    <i class="fa-solid fa-list-ul"></i>
+                    <i class="fa-solid fa-display"></i>
+                </div>
                 <!-- /.volume -->
             </div>
             <!-- /.right -->
