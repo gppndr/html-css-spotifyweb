@@ -175,8 +175,19 @@ img {
 .sidebar_bottom hr {
   display: none;
 }
+/* #endregion sitebar */
 
 /* #region content */
+/* #region upgraade */
+.upgrade {
+  padding:1rem;
+}
+.upgrade_btn{
+  color: white;
+  padding: 1rem 2.625rem;
+  border: 2px solid white;
+  border-radius: 1.5rem;
+}
 
 /* #region player */
 .player .left,
@@ -192,10 +203,17 @@ img {
   color: white;
   cursor: pointer;
 }
+.upgrade_btn:hover{
+transform: scale(1.03);
+}
 .sidebar_nav .legend:hover {
   border-left: 3px solid var(--lightgreen);
 }
 /* #region responsive */
+@media screen and (max-width: 350px){
+  .upgrade_btn{display: none;}
+}
+
 @media screen and (max-width: 638px){
   .sidebar_bottom{
     display: flex;
