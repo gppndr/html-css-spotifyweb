@@ -178,7 +178,7 @@ img {
 /* #endregion sitebar */
 
 /* #region content */
-/* #region upgraade */
+/* #region upgrade */
 .upgrade {
   padding:1rem;
 }
@@ -188,14 +188,32 @@ img {
   border: 2px solid white;
   border-radius: 1.5rem;
 }
+/* #endregion upgrade */
 
 /* #region player */
+.player{
+  padding: 1.5rem 0;
+}
+.player .left{
+  padding-left: 0.563rem;
+}
+.player .right{
+  padding-right: 0.563rem;
+}
 .player .left,
 .player .right {
   flex-grow: 1;
 }
 .player .center {
   flex-grow: 4;
+}
+.player .left img{
+  object-fit: fit;
+ width: 1.813rem;
+ height: 1.813rem;
+}
+.player .song_info{
+  padding-left: 1rem;
 }
 
 /* #region hover */
@@ -206,11 +224,14 @@ img {
 .upgrade_btn:hover{
 transform: scale(1.03);
 }
-.sidebar_nav .legend:hover {
+.sidebar_nav .legend:active {
   border-left: 3px solid var(--lightgreen);
 }
 /* #region responsive */
-@media screen and (max-width: 350px){
+@media screen and (max-height: 350px){
+  .sidebar{
+    overflow: hidden;
+  }
   .upgrade_btn{display: none;}
 }
 
@@ -229,6 +250,10 @@ transform: scale(1.03);
   .switch {
     display: inline-block;
   }
+  .sidebar_nav .legend:hover {
+    border-left: 3px solid var(--lightgreen);
+  }
+}
   .sidebar_bottom hr {
     display: block;
     width: 95%;
@@ -236,6 +261,9 @@ transform: scale(1.03);
   }
   .sidebar_bottom{
     align-self: flex-start;
+  }
+  .sidebar_nav .legend:active {
+    border-left: 3px solid var(--lightgreen);
   }
 }
 
