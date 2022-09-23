@@ -1,6 +1,7 @@
 /* color palette */
 :root {
   --sidebar: #000000;
+  --legend-text: #717171;
   --upgrade-bar: #080b12;
   --music: #141922;
   --player: #282828;
@@ -61,9 +62,25 @@
 /* #endregion */
 
 /* #region utility */
-
+.wrapper {
+  color: white;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+}
+.legend {
+  color: var(--legend-text);
+  font-weight: 500;
+}
 /* #region flex */
-.d_flex {
+.d-flex {
   display: flex;
 }
 .row {
@@ -72,11 +89,23 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.flex-start{
-    justify-content: flex-start;
+.column {
+  flex-direction: column;
 }
-.flex-end{
-    justify-content: flex-end;
+.align-center {
+  align-items: center;
+}
+.flex-start {
+  justify-content: flex-start;
+}
+.flex-end {
+  justify-content: flex-end;
+}
+.flex-center {
+  justify-content: center;
+}
+.space-between {
+  justify-content: space-between;
 }
 /* #endregion flex */
 /* #endregion utility */
@@ -85,23 +114,102 @@
 .debug .album {
   background-color: lightblue;
 }
-.debug .player .left, .debug .player .right{
-    background-color: lightpink;
+.debug .player .left,
+.debug .player .right {
+  background-color: lightpink;
+}
+/* #endregion debug */
+
+/* #region top */
+
+/* #region sidebar */
+.sidebar {
+  padding: 0.313rem 0.75rem 0.75rem 0.75rem;
+  overflow: auto;
+}
+.sidebar_top picture {
+  display: inline-block;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+.switch {
+  display: none;
+}
+.sidebar_nav {
+  padding-bottom: 0.75rem;
+}
+.sidebar_nav ul li {
+  padding-bottom: 1rem;
+}
+.sidebar ul li i {
+  font-size: 1.5rem;
+}
+.playlist h4 {
+  padding-bottom: 0.938rem;
+}
+.playlist .add_playlist {
+  padding-bottom: 1.188rem;
+}
+.playlist .add_playlist span,
+.sidebar_bottom .install span,
+.sidebar_bottom .propic span {
+  padding-left: 0.563rem;
+}
+.playlist ul li {
+  font-size: 0.9rem;
+  padding-bottom: 1.5rem;
+}
+.sidebar_bottom {
+  align-self: flex-start;
+}
+.sidebar_bottom .install {
+  padding-bottom: 0.75rem;
+}
+.sidebar_bottom .propic img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  object-fit: contain;
+  background-color: #717171;
+}
+.sidebar_bottom hr {
+  display: none;
 }
 
 /* #region content */
 
 /* #region player */
-.player .left, .player .right{
-    flex-grow: 1;
+.player .left,
+.player .right {
+  flex-grow: 1;
 }
-.player .center{
-    flex-grow: 4;
-} 
+.player .center {
+  flex-grow: 4;
+}
+
+/* #region hover */
+.legend:hover {
+  color: white;
+  cursor: pointer;
+}
+.sidebar_nav .legend:hover {
+  border-left: 3px solid var(--lightgreen);
+}
 /* #region responsive */
 @media screen and (min-width: 639px) {
   .sidebar {
     width: var(--sidebar-wide);
+  }
+  .switch {
+    display: inline-block;
+  }
+  .sidebar_bottom hr {
+    display: block;
+    width: 130%;
+    margin-bottom: 1rem;
+  }
+  .sidebar_bottom {
+    align-self: flex-start;
   }
 }
 
