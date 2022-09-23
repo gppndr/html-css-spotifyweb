@@ -159,8 +159,8 @@ img {
   font-size: 0.9rem;
   padding-bottom: 1.5rem;
 }
-.sidebar_bottom {
-  align-self: flex-start;
+.sidebar_bottom{
+  width: 100%;
 }
 .sidebar_bottom .install {
   padding-bottom: 0.75rem;
@@ -196,6 +196,14 @@ img {
   border-left: 3px solid var(--lightgreen);
 }
 /* #region responsive */
+@media screen and (max-width: 638px){
+  .sidebar_bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @media screen and (min-width: 639px) {
   .sidebar {
     width: var(--sidebar-wide);
@@ -205,10 +213,10 @@ img {
   }
   .sidebar_bottom hr {
     display: block;
-    width: 130%;
+    width: 95%;
     margin-bottom: 1rem;
   }
-  .sidebar_bottom {
+  .sidebar_bottom{
     align-self: flex-start;
   }
 }

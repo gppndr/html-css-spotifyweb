@@ -19,9 +19,61 @@
 
 <body class="debug">
     <div class="wrapper">
-        <div class="top d_flex">
-            <div class="sidebar"></div>
+        <div class="top d-flex">
+            <div class="sidebar d-flex column align-center space-between">
+                <div class="sidebar_top">
+                    <picture>
+                        <source media="(max-width: 639px )" srcset="./assets/img/logo-small.svg">
+                        <img src="./assets/img/logo.svg" alt="logo spotify">
+                    </picture>
+                    <nav class="sidebar_nav">
+                        <ul>
+                            <li><a class="legend" href="#"><i class="fa-solid fa-house"></i> <span
+                                        class="switch">Home</span></a></li>
+                            <li><a class="legend" href="#"><i class="fa-solid fa-magnifying-glass"></i> <span
+                                        class="switch">Cerca</span></a></li>
+                            <li><a class="legend" href="#"><i class="fa-solid fa-bars-staggered"></i> <span
+                                        class="switch">La tua libreria</span></a></li>
+                        </ul>
+                    </nav>
+                    <!-- /.sidebar_nav -->
+                    <div class="playlist switch">
+                        <h4>PLAYLIST</h4>
+                        <a class="legend add_playlist d-flex align-center" href="#"><i
+                                class="fa-solid fa-square-plus fa-2x"></i>
+                            <span class="switch">Crea Playlist</span></a>
+                        <ul>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                            <li><a class="legend" href="#">Nome Playlist</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.playlist -->
+                </div>
+                <!-- /.sidebar_top -->
+                <div class="sidebar_bottom">
+                    <div class="legend install d-flex align-center">
+                        <i class="fa-regular fa-circle-down"></i>
+                        <span class="switch">Installa
+                            app</span>
+                    </div>
+                    <hr>
+                    <div class="propic d-flex align-center">
+                        <img src="./assets/img/profile.svg" alt="">
+                        <span class="switch">John
+                            Doe</span>
+                    </div>
+
+
+                </div>
+                <!-- /.sidebar_bottom -->
+            </div>
             <!-- /.sidebar -->
+
             <div class="content">
                 <div class="upgrade"></div>
                 <!-- /.upgrade -->
